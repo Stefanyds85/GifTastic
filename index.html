@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GifTastic</title>
+
+    <!-- Add links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+
+    <div class="jumbotron"></div>
+
+<!-- BUTTON ROW -->
+<div class = "row">
+        <div id = "giphyBtns" class = "col-lg-12">
+            <div class="panel panel-default">
+                <p>celeb search / resuld buttons</p>
+            </div>
+        </div>
+  
+<!-- SEARCH ROW -->
+<div class="row">
+
+<!-- SEARCH COLUNM-->
+    <div class = "col-md-12">
+            <div class="panel panel-default">
+                <form>
+                  <div class="searchForm">
+                   <label for="search giphy">Search Favorite Celebrity</label>
+                   <input type="text" class="searchGihy" id="celebInput" placeholder="Search">
+                 </div>
+
+                <button type="submit" class="submitBtn">Submit</button>
+                </form>
+            </div>
+    </div>
+</div>
+
+<!-- GIPHY ROW -->
+<div class="row">
+
+<!-- GIPHY CLIPS-->
+    <div id="celebGiphy" class = "col-md-12">
+            <div class="panel panel-default">
+                <p>list of giphys clips</p> 
+            </div>
+    </div>    
+</div>
+
+</div>
+    
+<script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
