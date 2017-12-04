@@ -17,15 +17,22 @@
 <body>
 <div id="container">
 
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+
+        <!-- <image id="headerPic" src="assets/css/images/header1.png"></image> -->
+
+    </div>
 
 <!-- BUTTON ROW -->
 <div class = "row">
-        <div id = "giphyBtns" class = "col-lg-12">
-            <div class="panel panel-default">
-                <p>celeb search / resuld buttons</p>
-            </div>
+    <div class = "col-lg-12">
+        <div class="panel panel-default">
+            <div id = "giphyBtns"></div>
+            <p>celeb search / resuld buttons</p>
+            <div id = "celebrity"></div>
         </div>
+    </div>
+</div>
   
 <!-- SEARCH ROW -->
 <div class="row">
@@ -36,7 +43,7 @@
                 <form>
                   <div class="searchForm">
                    <label for="search giphy">Search Favorite Celebrity</label>
-                   <input type="text" class="searchGihy" id="celebInput" placeholder="Search">
+                   <input type="text" id="searchGiphy" class="celebInput" placeholder="Search">
                  </div>
 
                 <button type="submit" class="submitBtn">Submit</button>
