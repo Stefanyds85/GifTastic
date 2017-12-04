@@ -36,7 +36,21 @@ $("#searchGiphy").on("click", function(event) {
 displayButtons();
 
 
+function displayCelibrityInfo() {
+  
+          var celebrityName = $("giphyBtns").attr("data-name");
+          var queryURL = "https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=RAC4lCleXNU7kZvt4CYXUAEdlO9myO62&limit=5";
+  
+          $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).done(function(response) {
+            $("#celebGiphy").text(JSON.stringify(response));
+            displayButtons();
+          });
+        }
 
+displayCelibrityInfo();
 
 
 
