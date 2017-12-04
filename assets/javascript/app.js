@@ -9,6 +9,7 @@ var topics = ["Kavin Hart","Jay Z", "Michel Obama", "Denzel Washington","Oprah W
 
 function displayButtons() {
 
+  
   for (var i = 0; i < topics.length; i++) {
 
     var x = $("<button>");
@@ -17,7 +18,9 @@ function displayButtons() {
     x.attr("data-name", topics[i]);
     x.text(topics[i]);
     $("#giphyBtns").append(x);
+
   }
+  
 }
 
 $("#searchGiphy").on("click", function(event) {
@@ -28,11 +31,9 @@ $("#searchGiphy").on("click", function(event) {
   topics.push(celebrity);
   console.log(topics);
   
-  
-  displayButtons();
 });
 
-
+displayButtons();
 
 
 
