@@ -6,6 +6,7 @@ $(document).ready(function () {
 var topics = ["Kavin Hart","Jay Z", "Michel Obama", "Denzel Washington","Oprah Winfrey"];
 
 
+
 function displayButtons() {
 
   for (var i = 0; i < topics.length; i++) {
@@ -25,8 +26,8 @@ $("#searchGiphy").on("click", function(event) {
   var celebrity = $("#celebInput").val().trim();
   
   topics.push(celebrity);
-  console.log(topics)
-
+  console.log(topics);
+  
   
   displayButtons();
 });
