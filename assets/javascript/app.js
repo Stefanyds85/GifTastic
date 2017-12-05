@@ -7,16 +7,16 @@ var topics = ["Kevin Hart","Jay Z", "Michel Obama", "Denzel Washington","Oprah W
 
 
 function displayButtons() {
-
+  $("#giphyBtns").empty();
   
   for (var i = 0; i < topics.length; i++) {
 
-    var x = $("<button>");
+    var gifButton = $("<button>");
 
-    x.addClass("celebrity");
-    x.attr("data-name", topics[i]);
-    x.text(topics[i]);
-    $("#giphyBtns").append(x);
+    gifButton.addClass("celebrity");
+    gifButton.attr("data-name", topics[i]);
+    gifButton.text(topics[i]);
+    $("#giphyBtns").append(gifButton);
 
   };
 };
@@ -28,10 +28,10 @@ $(".submitBtn").on("click", function(event) {
   
   topics.push(celebrity);
   console.log(topics);
+
+  displayButtons();
   
 });
-
-displayButtons();
 
 
 
@@ -53,7 +53,7 @@ function displayCelebrityInfo() {
         };
         $("#giphyBtns").on("click", displayCelebrityInfo);
         
-        displayCelebrityInfo();
+         displayButtons();
 
 });
 

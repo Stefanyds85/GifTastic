@@ -1,21 +1,31 @@
- 
+.body {
+
+    margin: 30px,
+    
+
+}
+
+
 .col-lg-12{
     margin:40px;
     padding: 5px;
+    background-color: goldenrod
 }
 
 .col-md-12{
     
     margin:40px;
-    padding: 5px; 
+    padding: 5px;
+    background-color: goldenrod 
 }
 
 .col-md-12{
     margin:40px;
-    padding: 5px;   
+    padding: 5px;
+    background-color: goldenrod   
 }
 
-.row{
+/* .row{
 
     background-color: goldenrod
-}
+} */
