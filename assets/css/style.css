@@ -1,17 +1,20 @@
 .body {
+    background-color: lightseagreen;
+     
+}
 
-    margin: 30px,
-    
+#headerPic{
+   margin-left: 180px;
+   width: 1000px;
 
 }
 
-
-.col-lg-12{
-    margin:40px;
+.panel panel-default{ 
+    margin:30px;
     padding: 5px;
     background-color: goldenrod
 }
-
+/* 
 .col-md-12{
     
     margin:40px;
@@ -25,7 +28,7 @@
     background-color: goldenrod   
 }
 
-/* .row{
-
+/* .row{ */
+/* 
     background-color: goldenrod
-} */
+} */  

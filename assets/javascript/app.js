@@ -38,34 +38,36 @@ $(".submitBtn").on("click", function(event) {
 function displayCelebrityInfo() {
 
   var celebrityName = $("#celebGiphy").attr("data-name");
-          var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=RAC4lCleXNU7kZvt4CYXUAEdlO9myO62&q=celebrity+name&limit=2";
+          var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=RAC4lCleXNU7kZvt4CYXUAEdlO9myO62&q=celebrity+name&limit=10";
   
           $.ajax({
             url: queryURL,
             method: "GET"
           }).done(function(response) {
-           console.log(response)
+           
+            var results = response.data
+            
+            results.forEach (function (item, index) {
 
-            var image = $("<img>").attr("src",celebPic);
-            var celebPic = response.images;
+            var image = $("<img>").attr("src", results[index].images.fixed_height_still.url);
+            // var celebPic = response.images;
 
-            var rated = $("<p>").text("Rated:" + rating);
-            var rating = response.rating;
+            var rated = $("<p>").text("Rated:" + results[index].rating);
+            // var rating = response.rating;
 
             $("#celebGiphy").empty();
-            $("#celebGiphy").append(images, rating);
-
-              
+            $("#celebGiphy").append(image, rated);
+            
             
             displayButtons();
-
+            });
           });
         };
 
         $("#giphyBtns").on("click", displayCelebrityInfo);
         
          displayButtons();
-
+         displayCelebrityInfo()
 });
 
 
