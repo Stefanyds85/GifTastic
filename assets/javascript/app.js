@@ -7,10 +7,11 @@ var topics = ["Kevin Hart","Jay Z", "Michel Obama", "Denzel Washington","Oprah W
 
 
 function displayButtons() {
+  
   $("#giphyBtns").empty();
   
   for (var i = 0; i < topics.length; i++) {
-
+  
     var gifButton = $("<button>");
 
     gifButton.addClass("celebrity");
@@ -22,8 +23,9 @@ function displayButtons() {
 };
 
 $(".submitBtn").on("click", function(event) {
+  var topicBtn = $(".submitBtn").attr("data-name");
   event.preventDefault();
-
+  
   var celebrity = $(".celebInput").val().trim();
   
   topics.push(celebrity);
@@ -36,7 +38,7 @@ $(".submitBtn").on("click", function(event) {
 
 
 function displayCelebrityInfo() {
-
+  v
   var celebrityName = $("#celebGiphy").attr("data-name");
           var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=RAC4lCleXNU7kZvt4CYXUAEdlO9myO62&q=celebrity+name&limit=10";
   
